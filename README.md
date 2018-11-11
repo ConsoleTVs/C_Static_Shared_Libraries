@@ -37,4 +37,5 @@ gcc source/main.c -o bin/main_static.exe static_library/calculator.a
 gcc -c library/calculator.c -o library/calculator.o
 gcc -shared library/calculator.o -o shared_library/calculator.dll
 cp shared_library/calculator.dll bin/calculator.dll
+gcc source/main.c -o bin/main_shared.exe shared_library/calculator.dll
 ```
